@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: bold;
+}
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+header img {
+  max-width: 30%;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+header h1 {
+  font-size: 18px;
+}
+
+/*---------SIDEBAR----------- */
+
+nav li {
+  padding-top: 50px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+nav a {
+  margin-right: 40px;
+  color: black;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  font-size: 20px;
+}
+
+#check {
+  display: none;
+}
+
+#open {
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(220, 220, 220);
+    opacity: 90%;
+    transition: all 0.5s;
+  }
+  nav li {
+    position: absolute;
+    display: flex;
+    padding-top: 20px;
+    flex-direction: column;
+    top: 50px;
+    justify-content: center;
+    text-align: center;
+    align-items: baseline;
+  }
+
+  nav a {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    height: 100%;
+    line-height: 65px;
+    padding-left: 35px;
+    transition: 0.4s;
+  }
+
+  nav a:hover {
+    padding-left: 48px;
+  }
+
+  #check:checked ~ nav {
+    left: 0;
+  }
+
+  #open {
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+  }
+}
+
+/*---------SHOES-----------*/
+.shoes {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "sp1 sp2"
+    "sp3 sp4"
+    "sp5 sp6"
+    "sp7 sp8";
+}
+@media only screen and (min-width: 768px) {
+  .shoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "sp1 sp2 sp3 sp4"
+      "sp5 sp6 sp7 sp8";
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .shoes {
+    max-width: 60%;
+    margin: auto;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "sp1 sp2 sp3 sp4"
+      "sp5 sp6 sp7 sp8";
+  }
+}
+.shoes img {
+  max-width: 100%;
+}
+
+.shoes span {
+  color: rgb(110, 110, 110);
+}
+
+/*----------FOOTER--------*/
+
+footer {
+  position: sticky;
+  background: rgb(220, 220, 220);
+  width: 100%;
+  top: 100%;
+  padding: 50px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer-links a {
+  color: black;
+}
